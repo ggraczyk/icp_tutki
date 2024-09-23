@@ -1,0 +1,20 @@
+export DFXVM_INIT_YES=true
+source "$HOME/.local/share/dfx/env"
+
+
+ before: export DFXVM_INIT_YES=true && sh -ci "$(curl -fsSL https://smartcontracts.org/install.sh)" && source "$HOME/.local/share/dfx/env" && rustup target add wasm32-unknown-unknown
+    init: dfx new my_project --type rust --frontend vue -q && cd my_project && dfx start --background && npm install && dfx deploy 
+
+
+dfx new icpWebinar2 --type motoko --frontend vue -q 
+cd icpWebinar2
+dfx start --background 
+npm install  
+dfx deploy
+
+
+git init
+git add .
+
+
+
