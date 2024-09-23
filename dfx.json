@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "icpWebinar2_backend": {
+      "main": "src/icpWebinar2_backend/main.mo",
+      "type": "motoko"
+    },
+    "icpWebinar2_frontend": {
+      "dependencies": [
+        "icpWebinar2_backend"
+      ],
+      "source": [
+        "src/icpWebinar2_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "icpWebinar2_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
