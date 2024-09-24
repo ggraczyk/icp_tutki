@@ -12,9 +12,32 @@ dfx start --background
 npm install  
 dfx deploy
 
+dfx stop
+dfx start --background --clean
 
 git init
 git add .
 
+-- w VSC  Add Remote ...
+    commit i push z VSC nie git
+    VSC zapyta o autoryzację
 
 
+------------------------- od JAcoba
+
+1. Instalacja WSL                                  
+                                                                                                   
+wsl --install
+(Instaluje Windows Subsystem for Linux (WSL).)
+
+export DFXVM_INIT_YES=true 
+(Ustawia zmienne środowiskowe do instalacji DFX.)
+
+sh -ci "$(curl -fsSL https://smartcontracts.org/install.sh)"
+(Pobiera i instaluje DFX z podanego URL.)
+
+source "$HOME/.local/share/dfx/env"
+(Wczytuje zmienne środowiskowe DFX do powłoki.)
+
+rustup target add wasm32-unknown-unknown
+(Dodaje cel kompilacji Rust do WebAssembly.)
