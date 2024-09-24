@@ -41,3 +41,8 @@ source "$HOME/.local/share/dfx/env"
 
 rustup target add wasm32-unknown-unknown
 (Dodaje cel kompilacji Rust do WebAssembly.)
+
+
+------------ dzień2
+cd icpWebinar2/src/icpWebinar2_frontend
+npm run start

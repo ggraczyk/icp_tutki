@@ -1,28 +1,30 @@
-<script setup>
-import { ref } from 'vue';
-import { icpWebinar2_backend } from 'declarations/icpWebinar2_backend/index';
-let greeting = ref('');
-
-async function handleSubmit(e) {
-  e.preventDefault();
-  const target = e.target;
-  const name = target.querySelector('#name').value;
-  await icpWebinar2_backend.greet(name).then((response) => {
-    greeting.value = response;
-  });
-}
-</script>
-
 <template>
-  <main>
-    <img src="/logo2.svg" alt="DFINITY logo" />
-    <br />
-    <br />
-    <form action="#" @submit="handleSubmit">
-      <label for="name">Enter your name: &nbsp;</label>
-      <input id="name" alt="Name" type="text" />
-      <button type="submit">Click Me!</button>
-    </form>
-    <section id="greeting">{{ greeting }}</section>
-  </main>
+  <div id="app" class="app-container">
+   <Header />
+   <About />
+   <Projects />
+   <Skils />
+   <Contacts />
+  </div> 
 </template>
+
+<script>
+import Header from './components/Header.vue'
+import About from './components/aboutYou.vue'
+import Projects from './components/projects.vue'
+import Skils from './components/skils.vue'
+import Contacts from './components/contacts.vue'
+
+export default {
+  name: "App",
+  components: {
+    Header,
+    About,
+    Projects,
+    Skils,
+    Contacts
+  },
+
+};
+
+</script>
