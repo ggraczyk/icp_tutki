@@ -1,8 +1,8 @@
 <template>
     <header class="header">
       <div class="contact-list">
-        <a href="https://github.com/yourusername" target="_blank" class="contact-item">
-          GitHub
+        <a href="https://sites.google.com/site/graczykgrzegorz/astrofotografia/inne" target="_blank" class="contact-item">
+          Astrofotografia
         </a>
         <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-item">
           LinkedIn
